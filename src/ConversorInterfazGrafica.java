@@ -5,7 +5,7 @@ import java.awt.event.*;
 import java.time.LocalDateTime;
 
 
-public class ConversorMonedasGUI extends JFrame {
+public class ConversorInterfazGrafica extends JFrame {
 
     private JComboBox<String> comboOrigen, comboDestino;
     private JTextField campoCantidad;
@@ -13,7 +13,7 @@ public class ConversorMonedasGUI extends JFrame {
     private JTextArea areaHistorial;
     private HistorialConversiones historial;
 
-    public ConversorMonedasGUI() {
+    public ConversorInterfazGrafica() {
         setTitle("Conversor de Monedas");
         setSize(700, 500);
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
@@ -28,8 +28,15 @@ public class ConversorMonedasGUI extends JFrame {
         });
 
         JPanel panelEntrada = new JPanel(new GridLayout(5, 2, 5, 30));
-        String[] monedas = {"USD", "EUR", "COP", "GBP", "JPY", "MXN", "BRL", "ARS", "CHF", "CAD",
-        "AUD", "NZD", "CNY", "INR", "RUB", "ZAR", "KRW", "TRY", "SEK", "NOK"};
+        String[] monedas = {"USD = dólar estadounidense", "EUR = euro", "COP = peso colombiano", "GBP = libra esterlina", "JPY = yen japones",
+        "MXN = peso mexicano", "BRL = real brasileño", "ARS = peso argentino", "CHF = franco suizo", "CAD = dólar canadiense",
+        "AUD = dólar australiano", "NZD = dólar neozelandes", "CNY = yuan chino", "INR = rupia india", "RUB = rublo ruso", "CLP = peso chileno",
+        "PEN = sol peruano", "VES = bolivar venezolano", "EGP = libra egipcia", "NGN = naira nigeriana", "ZAR = rand sudafricano",
+        "KRW = won surcoreano", "TRY = lira turca", "SEK = corona sueca", "NOK = corona noruega", "SGD = dólar de singapur", "HKD = dolar de hong kong",
+        "DKK = corona danesa", "OMR = rial omaní", "CZK = corona checa", "HUF = florin húngaro", "ILS = shekel israelí", "MYR = ringgit malayo",
+        "THB = baht tailandés", "PHP = peso filipino", "IDR = rupia indonesia", "PKR = rupia pakistaní", "BGN = lev búlgaro", "RON = leu rumano",
+        "HRK = kuna croata", "ISK = corona islandesa", "ALL = lek albanés", "UAH = grivna ucraniana", "KWD = dinar kuwaití", "BHD = dinar bareiní",
+        "VND = dong vietnamita", "AED = dirham de los emiratos árabes unidos", "SAR = riyal saudita", "QAR = riyal catarí", "PLN = zloty polaco",};
 
         JLabel etiquetaMonedaBase = new JLabel("Moneda base:");
         etiquetaMonedaBase.setBorder(new EmptyBorder(0, 50, 0, 0)); // Desplaza hacia la derecha
@@ -55,10 +62,6 @@ public class ConversorMonedasGUI extends JFrame {
         botonConvertir.addActionListener(e -> convertirMoneda());
         panelEntrada.add(botonConvertir);
 
-        JButton botonGuardar = new JButton("Guardar historial");
-        botonGuardar.addActionListener(e -> historial.guardarEnArchivo("historial_conversiones.txt"));
-        panelEntrada.add(botonGuardar);
-
         etiquetaResultado = new JLabel("Resultado: ");
         panelEntrada.add(etiquetaResultado);
 
@@ -76,8 +79,8 @@ public class ConversorMonedasGUI extends JFrame {
     }
 
     private void convertirMoneda() {
-        String origen = comboOrigen.getSelectedItem().toString();
-        String destino = comboDestino.getSelectedItem().toString();
+        String origen = comboOrigen.getSelectedItem().toString().split(" = ")[0];
+        String destino = comboDestino.getSelectedItem().toString().split(" = ")[0];
         String textoCantidad = campoCantidad.getText();
 
         try {
@@ -111,6 +114,6 @@ public class ConversorMonedasGUI extends JFrame {
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(ConversorMonedasGUI::new);
+        SwingUtilities.invokeLater(ConversorInterfazGrafica::new);
     }
 }
