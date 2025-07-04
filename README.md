@@ -15,7 +15,8 @@ Más abajo encontrarás unademostración en video para usarlo, las característi
 -------------------------------------------------
 ## 🎥 Demostración en Video
 
-[![Ver demostración en video](43144ba1-7b9a-4cb0-bbec-ea600dc0a126.png)]([https://somup.com/cTifo5LNB2](https://somup.com/cTifoNLNBK))
+[![Ver demostración en video](43144ba1-7b9a-4cb0-bbec-ea600dc0a126.png)](https://somup.com/cTifoNLNBK)
+
 
 
 -------------------------------------------------
