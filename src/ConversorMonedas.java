@@ -18,10 +18,10 @@ public class ConversorMonedas {
                 .GET()
                 .build();
 
-        int responseCode = conexion.getResponseCode();
-        if (responseCode == 200) {
-            InputStreamReader reader = new InputStreamReader(conexion.getInputStream());
-            JsonObject json = JsonParser.parseReader(reader).getAsJsonObject();
+        HttpResponse<String> respuesta = cliente.send(solicitud, HttpResponse.BodyHandlers.ofString());
+
+        if (respuesta.statusCode() == 200) {
+            JsonObject json = JsonParser.parseString(respuesta.body()).getAsJsonObject();
             JsonObject rates = json.getAsJsonObject("conversion_rates");
 
             if (rates.has(destino)) {
