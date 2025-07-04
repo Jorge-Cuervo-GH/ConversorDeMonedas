@@ -28,25 +28,24 @@ En el siguiente video se muestra una breve explicación del código y las instru
 - 🧩 **Diseño modular**: el código está organizado por componentes separados (lógica de conversión, interfaz, historial, estructura de datos), lo que facilita el mantenimiento y posibles mejoras futuras.
 - 🆕 **Uso de `record` en Java**: se implementa la nueva estructura `record` para representar cada conversión de forma simple, segura y legible.
 - 🚫 **Manejo de errores y validaciones**: el programa informa al usuario si hay errores con la conexión, API o si se ingresan datos inválidos.
-- 🖥️ **Compatible con sistemas de escritorio**: funciona en cualquier equipo con Java 14+ instalado, sin necesidad de instalar software adicional.
 
 
 ----------------------------------------------
 ## 🧩 Estructura del proyecto
 
 ```
- 📂 conversor-monedas-java
-├── ConversorMoneda.java          # Conexión a la API y lógica de conversión
-├── ConversorMonedasGUI.java      # Interfaz gráfica
-├── HistorialConversiones.java    # Historial y guardado
-├── Conversion.java               # record para representar conversiones
-├── gson-2.10.1.jar               # Librería para manejar JSON
-└── historial_conversiones.txt    # Archivo generado con el historial
+ 📂 conversorDeMonedas-java
+├── ConversorMonedas.java              # Conexión a la API y lógica de conversión
+├── ConversorInterfazGrafica.java      # Interfaz gráfica
+├── HistorialConversiones.java         # Historial y guardado
+├── Conversion.java                    # record para representar conversiones
+├── gson-2.13.1.jar                    # Librería para manejar JSON
+└── historial_conversiones.txt         # Archivo generado con el historial
 ```
 ----------------------------------------------
 ## 💻 Tecnologías utilizadas
 
-- **Java 14+**
+- **Java 11+**
 - **Swing** para la interfaz gráfica
 - **HttpClient (Java 11+)** para solicitudes HTTP
 - **ExchangeRate API** para obtener tasas de cambio
@@ -68,7 +67,7 @@ Gracias a Swing, se puede crear una interfaz gráfica amigable sin necesidad de 
 
 Este proyecto puede ser una excelente base para aprender a trabajar con APIs, GUIs, archivos y estructuras modernas de Java.
 
-Desarrollar este conversor de monedas en Java fue una experiencia muy enriquecedora que me permitió aplicar varios conceptos clave de la programación moderna en Java. A lo largo del proyecto, no solo reforcé mis conocimientos sobre estructuras como `record` y el manejo de excepciones, sino que también aprendí a consumir servicios web mediante APIs externas como ExchangeRate.
+Desarrollar este conversor de monedas en Java fue una experiencia muy enriquecedora que me permitió aplicar varios conceptos clave de la programación en Java. A lo largo del proyecto, no solo reforcé mis conocimientos sobre estructuras como `record` y el manejo de excepciones, sino que también aprendí a consumir servicios web mediante APIs externas como ExchangeRate.
 
 Me di cuenta de la importancia de mantener un diseño modular: separar la interfaz gráfica, la lógica de negocio, el modelo de datos (`Conversion`) y el historial, facilita muchísimo el mantenimiento y la escalabilidad del programa. Por ejemplo, si en un futuro quiero reemplazar la API o agregar más funcionalidades (como gráficos de tipo de cambio o soporte offline), puedo hacerlo sin tener que rehacer todo el sistema.
 
