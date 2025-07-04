@@ -14,7 +14,10 @@ Más abajo encontrarás instrucciones detalladas para usarlo, las característic
 
 -------------------------------------------------
 ## 📸 Vista previa
-En el siguiente video se muestra una breve explicación del código y las instrucciones de su uso.
+En el siguiente video se muestra las instrucciones de su uso.
+
+https://somup.com/cTifoALNA8
+
 -------------------------------------------------
 
 ## ⚙️ Características
