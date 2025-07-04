@@ -16,7 +16,7 @@ Más abajo encontrarás instrucciones detalladas para usarlo, las característic
 ## 📸 Vista previa
 En el siguiente video se muestra las instrucciones de su uso.
 
-https://somup.com/cTifoALNA8
+[https://somup.com/cTifoALNA8](https://somup.com/cTifo5LNB2)
 
 -------------------------------------------------
 
