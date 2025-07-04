@@ -12,8 +12,11 @@ public class ConversorMonedas {
     public static double convertir(String origen, String destino, double cantidad) throws Exception {
         String urlStr = BASE_URL + API_KEY + "/latest/" + origen;
 
-        HttpURLConnection conexion = (HttpURLConnection) new URL(urlStr).openConnection();
-        conexion.setRequestMethod("GET");
+        HttpClient cliente = HttpClient.newHttpClient();
+        HttpRequest solicitud = HttpRequest.newBuilder()
+                .uri(URI.create(urlStr))
+                .GET()
+                .build();
 
         int responseCode = conexion.getResponseCode();
         if (responseCode == 200) {
