@@ -8,7 +8,7 @@ Además de todo lo técnico, este proyecto me ayudó a ver cómo una idea sencil
 
 Está diseñado para funcionar en cualquier equipo con Java 11 o superior, y puede ser usado tanto por curiosidad como por necesidad práctica, por ejemplo si estás planeando un viaje, haciendo cálculos financieros o simplemente quieres automatizar una tarea cotidiana como convertir divisas.
 
-Más abajo encontrarás instrucciones detalladas para usarlo, las características, la estructura del proyecto, las tecnologías que utilicé, y una pequeña reflexión con las conclusiones que me dejó esta experiencia.
+Más abajo encontrarás unademostración en video para usarlo, las características, la estructura del proyecto, las tecnologías que utilicé, y una pequeña reflexión con las conclusiones que me dejó esta experiencia.
 
 ¡Gracias por pasarte por aquí y espero que este proyecto sea de tu agrado!
 
