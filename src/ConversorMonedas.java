@@ -1,9 +1,9 @@
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 
 public class ConversorMonedas {
     private static final String API_KEY = "e2d049ccef5ac1a9f65a1833";
